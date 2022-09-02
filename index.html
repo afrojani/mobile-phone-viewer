@@ -11,10 +11,17 @@
 
 <body>
     <header>
-        <h1>Welcome to My Phone Hunter</h1>
+        <h1 class="text-center">Welcome to My Phone Hunter</h1>
     </header>
     <main class="container">
         <section>
+            <div class="mb-3 w-50">
+                <input type="email" class="form-control" id="search-field" placeholder="search here">
+            </div>
+            <div id="btn-search" class="btn btn-primary">Search</div>
+        </section>
+        <!-- display phones -->
+        <section class="mt-5">
             <div id="phone-container" class="row row-cols-1 row-cols-md-3 g-4">
             </div>
         </section>
