@@ -10,6 +10,19 @@ const displayPhones = phones => {
     // console.log(phones);
     const phoneContainer = document.getElementById('phone-container');
     phoneContainer.innerHTML = '';
+    phones = phones.slice(0, 10);
+    // display no phones found
+
+    const noPhone = document.getElementById('no-found-message');
+    if (phones.length === 0) {
+        noPhone.classList.remove('d-none');
+
+    }
+    else {
+        noPhone.classList.add('d-none');
+    }
+
+    // display all phones
     phones.forEach(phone => {
         console.log(phone);
         const phoneDiv = document.createElement('div');
@@ -36,4 +49,4 @@ document.getElementById('btn-search').addEventListener('click', function () {
     loadPhones(searchText);
 });
 
-loadPhones();
+// loadPhones();
